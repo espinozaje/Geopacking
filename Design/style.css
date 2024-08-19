@@ -1,0 +1,277 @@
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+    background: #ffffff;
+   margin: 0;
+    font-family:'Arlon SemiBold DEMO';
+    
+ 
+    overflow-x: hidden; 
+   
+    
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    transition: .3s;
+  }
+  ul {
+    list-style: none;
+    color: #000000;
+  }
+
+  
+
+  .nav {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 10000000000;
+}
+
+.nav__title {
+    font-weight: 900;
+    
+}
+
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+  .nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+  }
+
+  .nav__img {
+    display: block;
+    width: 30px;
+}
+
+
+.nav__close {
+    display: var(--show, none);
+}
+
+
+
+
+
+
+
+  @font-face {
+    font-family: 'Arlon SemiBold DEMO';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Arlon SemiBold DEMO'), url('../fonts/Arlon-Bold.ttf') format('woff');
+    }
+
+  @media (min-width: 860px) {
+    .container {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+    }
+    
+  }
+
+  @media (min-width: 992px) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  .landing-page header {
+    position: fixed;
+			
+			width: 100%;
+			display: flex;
+			
+			transition: 0.7s;
+			
+			z-index: 10;
+  }
+
+
+  @media (max-width: 990px) {
+    .landing-page header {
+      min-height: auto;
+      
+    }
+
+    .nav__menu{
+      display: block;
+  }
+
+  .nav__link--menu{
+      position: fixed;
+      background-color: #ffffff;
+      margin: 0%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: .7s opacity;
+      z-index: 9999;
+  }
+
+  .nav__link--show{
+      --show: block;
+      opacity:1 ;
+      pointer-events: unset;
+      top: 30px;
+      right: 30px;
+  }
+
+  .nav__close{
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 30px;
+      cursor: pointer;
+  }
+
+
+
+
+
+
+  }
+  .landing-page header .container {
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    
+    padding-bottom: 0;
+  }
+  
+  
+ 
+  .landing-page header .nav__link {
+    display: flex;
+    align-items: center;
+  }
+ 
+  .landing-page header .nav__link li {
+    margin-left: 40px;
+    color: rgba(14, 13, 13, 0.747);
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .landing-page header .nav__link .botonconta {
+    margin-left: 40px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: #28953f;
+  }
+  .landing-page header .nav__link li:not(:last-child):hover {
+    color: #ea5b15;
+  }
+  .landing-page .contentvideo .container {
+  
+    align-items: center;
+    
+    
+    height: 100%;
+    width: 100%;
+  }
+
+  
+
+  .landing-page .contentvideo {
+     height: 912px;
+    background-size: 100%;
+    position: relative;
+    
+
+}
+
+.landing-page .contentvideo .fondovideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -9999;
+}
+
+.landing-page .contentvideo .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+
+}
+
+
+  .landing-page .contentvideo .info h1 {
+    color: rgb(255, 240, 236);;
+    font-size: 60px;
+    margin-top: 250px;
+    margin-bottom: 350px;
+  }
+
+  .landing-page .contentvideo .info button {
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    cursor: pointer;
+    color: rgb(255, 240, 236);
+    background-color: #f75200;
+    font-family:'Arlon SemiBold DEMO';
+  }
+
+
+header.abajo{
+    background: #fff;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+
+header.abajo .logo,
+header.abajo ul li a{
+    color: #000;
+}

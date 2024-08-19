@@ -1,0 +1,126 @@
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul li {
+  list-style: none;
+  color: #fff;
+}
+
+.footer {
+  z-index: 1;
+  --footer-background:#ea5b15;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+ 
+}
+
+body .footer .content {
+  padding: 6rem 1rem 2rem;
+  background: var(--footer-background);
+  z-index: 2;
+  height: 400px;
+}
+.footer .content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.content h2 {
+  margin-bottom: .25rem;
+  font-size: 2.25rem;
+}
+
+.content span {
+  font-size: .875rem;
+}
+
+.footer__links  {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  transition: all 150ms ease-out;
+  justify-content: center;
+}
+
+.footer__links .footer__link {
+  transition: all 150ms ease-out;
+  display: inline-block;
+}
+
+.footer__link:hover:after {
+    width: 100%;
+}
+
+.footer__link:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background-color: #fff;
+    transition: width .25s ease-out;
+}
+.footer__socials {
+  justify-self: flex-end;
+}
+
+.footer__social {
+  font-size: 1.25rem;
+  margin-right: 1.5rem;
+}
+.footer__social:hover {
+  opacity: 0.8;
+}
+
+.footer__copy {
+  text-align: center;
+  background:#ea5b15;
+  font-size: .875rem;
+  text-align: center;
+  color: #dcdcdc;
+  padding: 3rem 0 2rem;
+  
+}
+
+
+@media screen and (max-width: 767px){
+  .footer .content {
+    padding: 0 1.5rem;
+  }
+  .footer .content .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content span {
+    font-size: .813rem;
+  }
+
+  .footer__links  {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  
+  .footer__socials {
+    justify-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 567px){
+  .footer .content .container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 3.5rem;
+  }
+}
